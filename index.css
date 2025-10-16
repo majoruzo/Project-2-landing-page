@@ -10,6 +10,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
 /* .navlinks{
@@ -24,7 +25,9 @@ body {
     margin: 10px;
     padding: 0;
 }
-
+.nav-links>li>a{
+    text-decoration: none;
+}
 .btn-container {
     display: flex;
     gap: 20px;
@@ -37,6 +40,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 100px;
+}
+.nav-mobile{
+    display: none;
+}
+
+.ham{
+    width: 45px;
+    height: 45px;
+    display: none;
+}
+.ham1{
+    display: none;
 }
 
 .sign {
@@ -296,13 +311,53 @@ h4 {
 
 } */
 
+.popup {
+  display: none; /* hidden by default */
+  /* position: absolute; */
+  /* top: 60px;       
+  right: 20px; */
+  background-color: white;
+  color: hsl(257, 27%, 26%);
+  border-radius: 5px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: bold;
+  /* z-index: 2000; */
+}
+
+/* .popup.show {
+  display: block; visible when toggled
+} */
+
 @media only screen and (min-width: 280px) and (max-width: 680px) {
-    
-  nav {
-    flex-direction: column;
+    nav{
+        display: none;
+    }
+  .nav-mobile{
+    /* flex-direction: column; */
+    display: flex;
     padding: 20px;
     gap: 15px;
+    /* position: fixed;
+    z-index: 1000; */
+    background-color: hsl(180, 66%, 49%);
+    color:white;
   }
+  .ham1{
+    display: block;
+  }
+  #mobileDropdown{
+    display: none;
+    position: fixed;
+    top: 75px;
+    left:0px;
+    background-color: hsl(180, 66%, 49%);
+    padding: 20px;
+}
+.show{
+    display: block !important;
+}
 
   .navbar {
     flex-direction: column;
@@ -310,11 +365,11 @@ h4 {
     gap: 10px;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
+  .nav-links-mobile {
+    margin:0px;
+    padding:0px; 
+     list-style: none;
+ }
   .logo1{
     margin-top: 30px;
     
@@ -329,6 +384,7 @@ h4 {
     width: 100%;
     align-items: center;
     gap: 10px;
+    display:none;
   }
 
   .first-section {
@@ -409,8 +465,24 @@ h4 {
     width: 100%;
   }
 
-}
+  .sign-mobile {
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 8px 16px;
 
+}
+.login-mobile {
+    border: none;
+    color: hsl(257, 7%, 63%);
+    background-color: white;
+    padding: 8px 16px;
+    margin-top:10px;
+
+
+}
+}
 
 @media only screen and (min-width: 680px) and (max-width: 1200px) {
   
